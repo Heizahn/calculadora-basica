@@ -1,0 +1,44 @@
+<main class="main">
+  <div class="calc">
+    <header>
+      <h3 class="calc__title">calc</h3>
+      <div class="calc__theme">
+        <span>Theme</span>
+        <div class="calc__theme-selection">
+          <div>
+            <span (click)="themeOne()">1</span>
+            <span (click)="themeTwo()">2</span>
+            <span (click)="themeThree()">3</span>
+          </div>
+          <div class="background__selecition">
+            <div id="circle"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="calc__output">{{ screenCalc }}</section>
+    <section class="calc__btns">
+      <button (click)="obtenerValor('7')">7</button>
+      <button (click)="obtenerValor('8')">8</button>
+      <button (click)="obtenerValor('9')">9</button>
+      <button id="delete" (click)="deleteNumber(screenCalc)">DEL</button>
+      <button (click)="obtenerValor('4')">4</button>
+      <button (click)="obtenerValor('5')">5</button>
+      <button (click)="obtenerValor('6')">6</button>
+      <button (click)="obtenerValor('+')">+</button>
+      <button (click)="obtenerValor('1')">1</button>
+      <button (click)="obtenerValor('2')">2</button>
+      <button (click)="obtenerValor('3')">3</button>
+      <button (click)="obtenerValor('-')">-</button>
+      <button (click)="obtenerValor('.')">.</button>
+      <button (click)="obtenerValor('0')">0</button>
+      <button (click)="obtenerValor('/')">/</button>
+      <button (click)="obtenerValor('*')">*</button>
+    </section>
+    <div class="btns-finales">
+      <button class="reset" (click)="reset()">RESET</button>
+      <button class="equal" (click)="obtenerResultado(screenCalc)">=</button>
+    </div>
+  </div>
+</main>
+<router-outlet></router-outlet>
